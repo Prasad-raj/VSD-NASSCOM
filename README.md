@@ -8,7 +8,8 @@
       #show the contents
       ls -ltr
       ```
-      <img width="351" alt="1" src="https://github.com/user-attachments/assets/48e2aca3-503a-43dc-b662-190fef43a021">
+      *#1*
+      <img width="551" alt="1" src="https://github.com/user-attachments/assets/48e2aca3-503a-43dc-b662-190fef43a021">
 
 
      
@@ -31,8 +32,10 @@
       prep -design picorv32a
 
       ```
-      <img width="464" alt="2" src="https://github.com/user-attachments/assets/d7d04aef-4792-4523-b950-cbc92b73e95f">
-      <img width="530" alt="3" src="https://github.com/user-attachments/assets/18eb4f43-2f92-433d-a110-9c43c4d9dbfa">
+      *#2*
+      <img width="564" alt="2" src="https://github.com/user-attachments/assets/d7d04aef-4792-4523-b950-cbc92b73e95f">   
+      *#3*
+      <img width="570" alt="3" src="https://github.com/user-attachments/assets/18eb4f43-2f92-433d-a110-9c43c4d9dbfa">
 
 
 
