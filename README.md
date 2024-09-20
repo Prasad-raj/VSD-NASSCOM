@@ -81,3 +81,26 @@ in our case,
    
 percentage of DFFs' is = 10.842968%
 
+
+# Section-2: Good vs Bad floorplan and inroduction to library cells:
+#### SKY130_D2_SK1_L6: Steps to run Floorplan using OpenLANE-
+   before moving to the floorplan run, let's have a watch over the config files that works behind completing the flow. also, we can modify the config files according to our requirement. the config fiiles contains various switches which works to make the run work.
+   ```tcl
+   #the config file can be found in the following directory
+      cd Desktop/work/tools/openlane_working_dir/openlane/configuration
+
+   #now have a look at the design specific (i.e. picorv32a in this case) config files. they are located at the following directory.
+      cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a
+   ```
+now, comeback to the run terminal and type the command-
+   ```tcl
+      run_floorplan
+   ```
+<!--6-->
+   <img width="822" alt="6" src="https://github.com/user-attachments/assets/a5200548-6e02-452c-9334-3cbb876f1f70">
+
+<!--7-->
+   <img width="815" alt="7" src="https://github.com/user-attachments/assets/32fa6709-0634-4a77-8885-7f930c46ce02">
+
+
+
