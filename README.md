@@ -59,10 +59,10 @@
       #formula for calculating the sequential block ratio in a design-
       (Total number of sequential blocks/ total cell count) * 100
       ```
-      In our case,
-         total number of DFF's=1613
-         total number of cells=14876
-         ratio = (1613/14876) * 100 = 10.84296%    
+      In our case,   
+         total number of DFF's=1613   
+         total number of cells=14876   
+         ratio = (1613/14876) * 100 = 10.84296%       
    
       <!--5-->
       <img width="259" alt="5" src="https://github.com/user-attachments/assets/207a27b7-499f-4099-8707-5e7d17d21ee4">     
