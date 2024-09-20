@@ -68,56 +68,7 @@
 
 # Section-2: Good vs Bad floorplan and inroduction to library cells:
 #### SKY130_D2_SK1_L6: Steps to run Floorplan using OpenLANE-
-   before moving to the floorplan run, let's have a watch over the config files that works behind completing the flow. also, we can modify the config files according to our requirement. the config fiiles contains various switches which works to make the run work.  
-      ```
-      #the config file can be found in the following directory
-      cd Desktop/work/tools/openlane_working_dir/openlane/configuration
-      #now have a look at the design specific (i.e. picorv32a in this case) config files. they are located at the following directory.
-      cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a
-      ```
-      
-now, comeback to the run terminal and type the command-
-      ```
-      run_floorplan
-      ```
-      <!--6-->
-      <img width="822" alt="6" src="https://github.com/user-attachments/assets/cd8967ae-5d9d-45a1-a761-05d5a6264c60">     
-      <!--7-->
-      <img width="735" alt="7" src="https://github.com/user-attachments/assets/32fa6709-0634-4a77-8885-7f930c46ce02">
-
-contents of the Floorplan.def file-
-      ```
-         #change the directory to floorplan.def
-         cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_17-49/results/floorplan/
-      ```
-      <!--8-->
-      <img width="735" alt="8" src="https://github.com/user-attachments/assets/9405005e-0d75-4928-8806-7a141836651e">
-
-
-open "magic" to see the grapical representation of def-
-      ```tcl
-
-      #change the directory
-      cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_17-49/results/floorplan/
-      
-      #use the follwing command to launch magic
-      magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
-      
-      
-
-diagonally placed tap cells- 
-<!--10-->
-<img width="735" alt="10" src="https://github.com/user-attachments/assets/fc900013-49b6-496d-9899-8f36623c271c">   
-
-decap cells placed at the border-
-<!--11-->
-<img width="186" alt="11" src="https://github.com/user-attachments/assets/058ab73e-20b2-4148-8c36-97f87a07ed17">   
-
-horizontal and vertical routing layers-
-<!--12-->
-<img width="735" alt="12" src="https://github.com/user-attachments/assets/610cefd3-cf3d-4cb1-8839-06e63749b22f">  
-<!--13-->
-<img width="735" alt="13" src="https://github.com/user-attachments/assets/e236d9f8-2471-4352-b1a6-7b17f5575a53">   
+   
 
 
 
