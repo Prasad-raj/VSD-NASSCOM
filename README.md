@@ -9,9 +9,7 @@
       ls -ltr
       ```
       <!--#1-->
-   <img width="735" alt="1" src="https://github.com/user-attachments/assets/48e2aca3-503a-43dc-b662-190fef43a021">
-
-
+      <img width="735" alt="1" src="https://github.com/user-attachments/assets/48e2aca3-503a-43dc-b662-190fef43a021">    
      
 #### SKY130_D1_SK3_L2: Design preparation steps-
    2. now alias the docker and invoke the tools.
@@ -33,12 +31,13 @@
 
       ```
       <!--#2-->
-   <img width="735" alt="2" src="https://github.com/user-attachments/assets/d7d04aef-4792-4523-b950-cbc92b73e95f">   
+      <img width="735" alt="2" src="https://github.com/user-attachments/assets/d7d04aef-4792-4523-b950-cbc92b73e95f">   
       <!--#3-->
-   <img width="735" alt="3" src="https://github.com/user-attachments/assets/18eb4f43-2f92-433d-a110-9c43c4d9dbfa">
+      <img width="735" alt="3" src="https://github.com/user-attachments/assets/18eb4f43-2f92-433d-a110-9c43c4d9dbfa">
 
 #### SKY130_D1_SK3_L3: Review files after design prep and run synthesis-
-   ```tcl
+   3. now run the synthesis step.
+      ```tcl
       #to run the synthesis
       run_synthesis
 
@@ -50,76 +49,61 @@
 
       #every results, logs will be stored in the following directory
       cd Desktop/work/tools/openlane_woring_dir/openlane/designs/picorv32a/runs
-   ``` 
-     <!--4-->
-  <img width="735" alt="4" src="https://github.com/user-attachments/assets/fd42a2c2-a688-4324-8afb-e4257f9fa964">
-
-
-              
-#### SKY130_D1_SK3_L4: OpenLANE project GIT link description-
-   ```bash
-   #to go to the project directory provided by the efabless
-      https://github.com/efabless/openlane
-   ```
-
-
+      ```
+      <!--4-->
+      <img width="692" alt="4" src="https://github.com/user-attachments/assets/2ebdd100-2103-4c7c-8e79-c61ca51bb17c">     
+      
 #### SKY130_D1_SK3_L5: steps to characterize synthesis results-
    in this stage we shall record the outputs of the synthesis stage. this stage includes synthesized netlist & timing report along with the sequential cell count, ratio.
-```
-   formula for counting the sequential blocks and ratio is,
+      ```
+      formula for counting the sequential blocks and ratio is,
             (total number of sequntial blocks / total cell count) *$100
-```
-in our case,    
-   the total number of sequential blocks= 1613    
-   total cell counts                    = 14876    
-   ratio                                = (1613/14876) * 100 = 10.842968%    
-
-   <!--#5-->
-<img width="259" alt="5" src="https://github.com/user-attachments/assets/edf3f361-ef20-42a8-8912-3178919c5e8b">    
-         check line number 13 for total cell count & line number 37 (highlighted) for total DFF count.
-   
-percentage of DFFs' is = 10.842968%
-
+      ```
+   in our case,    
+      the total number of sequential blocks= 1613    
+      total cell counts                    = 14876    
+      ratio                                = (1613/14876) * 100 = 10.842968%
+      <!--5-->
+      <img width="259" alt="5" src="https://github.com/user-attachments/assets/207a27b7-499f-4099-8707-5e7d17d21ee4">     
 
 # Section-2: Good vs Bad floorplan and inroduction to library cells:
 #### SKY130_D2_SK1_L6: Steps to run Floorplan using OpenLANE-
-   before moving to the floorplan run, let's have a watch over the config files that works behind completing the flow. also, we can modify the config files according to our requirement. the config fiiles contains various switches which works to make the run work.
-   ```tcl
-   #the config file can be found in the following directory
+   before moving to the floorplan run, let's have a watch over the config files that works behind completing the flow. also, we can modify the config files according to our requirement. the config fiiles contains various switches which works to make the run work.  
+      ```
+      #the config file can be found in the following directory
       cd Desktop/work/tools/openlane_working_dir/openlane/configuration
-
-   #now have a look at the design specific (i.e. picorv32a in this case) config files. they are located at the following directory.
+      #now have a look at the design specific (i.e. picorv32a in this case) config files. they are located at the following directory.
       cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a
-   ```
+      ```
+      
 now, comeback to the run terminal and type the command-
-   ```tcl
+      ```
       run_floorplan
-   ```
-<!--6-->
-<img width="735" alt="6" src="https://github.com/user-attachments/assets/a5200548-6e02-452c-9334-3cbb876f1f70">
-
-<!--7-->
-<img width="735" alt="7" src="https://github.com/user-attachments/assets/32fa6709-0634-4a77-8885-7f930c46ce02">
+      ```
+      <!--6-->
+      <img width="822" alt="6" src="https://github.com/user-attachments/assets/cd8967ae-5d9d-45a1-a761-05d5a6264c60">     
+      <!--7-->
+      <img width="735" alt="7" src="https://github.com/user-attachments/assets/32fa6709-0634-4a77-8885-7f930c46ce02">
 
 contents of the Floorplan.def file-
-   ```tcl
-      #change the directory to floorplan.def
+      ```
+         #change the directory to floorplan.def
+         cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_17-49/results/floorplan/
+      ```
+      <!--8-->
+      <img width="735" alt="8" src="https://github.com/user-attachments/assets/9405005e-0d75-4928-8806-7a141836651e">
+
+
+open "magic" to see the grapical representation of def-
+      ```tcl
+
+      #change the directory
       cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_17-49/results/floorplan/
-   ```
-<!--8-->
-<img width="735" alt="8" src="https://github.com/user-attachments/assets/9405005e-0d75-4928-8806-7a141836651e">
-
-let's see, how the def file looks in terms of graphics using a tool called "MAGIC"
-to open magic,
-   ```tcl
-   #change the directory to
-   cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_17-49/results/floorplan/
-
-   #use the follwing command to launch magic
-   magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
-   ```
-<!--9-->
-<img width="735" alt="9" src="https://github.com/user-attachments/assets/b1f263ad-c8c0-439f-b9f4-0354bc6c444f">
+      
+      #use the follwing command to launch magic
+      magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+      
+      
 
 diagonally placed tap cells- 
 <!--10-->
