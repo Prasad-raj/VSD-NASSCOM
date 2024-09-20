@@ -70,13 +70,14 @@
    formula for counting the sequential blocks and ratio is,
             (total number of sequntial blocks / total cell count) *$100
 ```
-in our case, 
-   the total number of sequential blocks= 1613
-   total cell counts                    = 14876
-   ratio                                = (1613/14876) * 100 = 10.842968%
+in our case,    
+   the total number of sequential blocks= 1613    
+   total cell counts                    = 14876    
+   ratio                                = (1613/14876) * 100 = 10.842968%    
 
    <!--#5-->
-   <img width="233" alt="5" src="https://github.com/user-attachments/assets/02c5b9b0-e78f-47ac-a949-31c49c618279">
+   <img width="259" alt="5" src="https://github.com/user-attachments/assets/edf3f361-ef20-42a8-8912-3178919c5e8b">    
+         check line number 13 for total cell count & line number 37 (highlighted) for total DFF count.
    
 percentage of DFFs' is = 10.842968%
 
