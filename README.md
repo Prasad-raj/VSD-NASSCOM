@@ -37,15 +37,24 @@
       *#3*
       <img width="570" alt="3" src="https://github.com/user-attachments/assets/18eb4f43-2f92-433d-a110-9c43c4d9dbfa">
 
-
-
-
-
-
-
 #### SKY130_D1_SK3_L3: Review files after design prep and run synthesis-
+   
+      #to run the synthesis
+      run_synthesis
 
+      #to exit from openLANE
+      exit
 
+      #to exit from the docker
+      exit
+
+      #every results, logs will be stored in the following directory
+      cd Desktop/work/tools/openlane_woring_dir/openlane/designs/picorv32a/runs
+*#4*
+      <img width="692" alt="4" src="https://github.com/user-attachments/assets/96d94631-01ca-4e05-a886-174ebbf4a09b">
+
+          
+      
 #### SKY130_D1_SK3_L4: OpenLANE project GIT link description-
 
 
