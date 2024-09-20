@@ -104,7 +104,7 @@ now, comeback to the run terminal and type the command-
 
 contents of the Floorplan.def file-
    ```tcl
-      #chhange the directory to floorplan.def
+      #change the directory to floorplan.def
       cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
    ```
 <!--8-->
