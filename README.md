@@ -54,7 +54,7 @@
       <img width="692" alt="4" src="https://github.com/user-attachments/assets/2ebdd100-2103-4c7c-8e79-c61ca51bb17c">     
       
 #### SKY130_D1_SK3_L5: steps to characterize synthesis results-
-   4. familiarizing with post-synth collaterals-
+   4. flop ratio calculation-
       ```tcl
       #formula for calculating the sequential block ratio in a design-
       (Total number of sequential blocks/ total cell count) * 100
