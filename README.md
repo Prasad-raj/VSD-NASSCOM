@@ -9,7 +9,7 @@
       ls -ltr
       ```
       <!--#1-->
-      <img width="735" alt="1" src="https://github.com/user-attachments/assets/48e2aca3-503a-43dc-b662-190fef43a021">
+   <img width="735" alt="1" src="https://github.com/user-attachments/assets/48e2aca3-503a-43dc-b662-190fef43a021">
 
 
      
@@ -33,9 +33,9 @@
 
       ```
       <!--#2-->
-      <img width="735" alt="2" src="https://github.com/user-attachments/assets/d7d04aef-4792-4523-b950-cbc92b73e95f">   
+   <img width="735" alt="2" src="https://github.com/user-attachments/assets/d7d04aef-4792-4523-b950-cbc92b73e95f">   
       <!--#3-->
-      <img width="735" alt="3" src="https://github.com/user-attachments/assets/18eb4f43-2f92-433d-a110-9c43c4d9dbfa">
+   <img width="735" alt="3" src="https://github.com/user-attachments/assets/18eb4f43-2f92-433d-a110-9c43c4d9dbfa">
 
 #### SKY130_D1_SK3_L3: Review files after design prep and run synthesis-
    ```tcl
@@ -50,10 +50,9 @@
 
       #every results, logs will be stored in the following directory
       cd Desktop/work/tools/openlane_woring_dir/openlane/designs/picorv32a/runs
-   ```   
-   
-   <!--4-->
-   <img width="735" alt="4" src="https://github.com/user-attachments/assets/fd42a2c2-a688-4324-8afb-e4257f9fa964">
+   ``` 
+     <!--4-->
+  <img width="735" alt="4" src="https://github.com/user-attachments/assets/fd42a2c2-a688-4324-8afb-e4257f9fa964">
 
 
               
@@ -76,7 +75,7 @@ in our case,
    ratio                                = (1613/14876) * 100 = 10.842968%    
 
    <!--#5-->
-   <img width="259" alt="5" src="https://github.com/user-attachments/assets/edf3f361-ef20-42a8-8912-3178919c5e8b">    
+<img width="259" alt="5" src="https://github.com/user-attachments/assets/edf3f361-ef20-42a8-8912-3178919c5e8b">    
          check line number 13 for total cell count & line number 37 (highlighted) for total DFF count.
    
 percentage of DFFs' is = 10.842968%
@@ -97,10 +96,10 @@ now, comeback to the run terminal and type the command-
       run_floorplan
    ```
 <!--6-->
-   <img width="735" alt="6" src="https://github.com/user-attachments/assets/a5200548-6e02-452c-9334-3cbb876f1f70">
+<img width="735" alt="6" src="https://github.com/user-attachments/assets/a5200548-6e02-452c-9334-3cbb876f1f70">
 
 <!--7-->
-   <img width="735" alt="7" src="https://github.com/user-attachments/assets/32fa6709-0634-4a77-8885-7f930c46ce02">
+<img width="735" alt="7" src="https://github.com/user-attachments/assets/32fa6709-0634-4a77-8885-7f930c46ce02">
 
 contents of the Floorplan.def file-
    ```tcl
@@ -108,7 +107,7 @@ contents of the Floorplan.def file-
       cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_17-49/results/floorplan/
    ```
 <!--8-->
-   <img width="735" alt="8" src="https://github.com/user-attachments/assets/9405005e-0d75-4928-8806-7a141836651e">
+<img width="735" alt="8" src="https://github.com/user-attachments/assets/9405005e-0d75-4928-8806-7a141836651e">
 
 let's see, how the def file looks in terms of graphics using a tool called "MAGIC"
 to open magic,
@@ -120,21 +119,21 @@ to open magic,
    magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
    ```
 <!--9-->
-   <img width="735" alt="9" src="https://github.com/user-attachments/assets/b1f263ad-c8c0-439f-b9f4-0354bc6c444f">
+<img width="735" alt="9" src="https://github.com/user-attachments/assets/b1f263ad-c8c0-439f-b9f4-0354bc6c444f">
 
 diagonally placed tap cells- 
 <!--10-->
-   <img width="735" alt="10" src="https://github.com/user-attachments/assets/fc900013-49b6-496d-9899-8f36623c271c">   
+<img width="735" alt="10" src="https://github.com/user-attachments/assets/fc900013-49b6-496d-9899-8f36623c271c">   
 
 decap cells placed at the border-
 <!--11-->
-   <img width="186" alt="11" src="https://github.com/user-attachments/assets/058ab73e-20b2-4148-8c36-97f87a07ed17">   
+<img width="186" alt="11" src="https://github.com/user-attachments/assets/058ab73e-20b2-4148-8c36-97f87a07ed17">   
 
 horizontal and vertical routing layers-
 <!--12-->
-   <img width="735" alt="12" src="https://github.com/user-attachments/assets/610cefd3-cf3d-4cb1-8839-06e63749b22f">  
+<img width="735" alt="12" src="https://github.com/user-attachments/assets/610cefd3-cf3d-4cb1-8839-06e63749b22f">  
 <!--13-->
-   <img width="735" alt="13" src="https://github.com/user-attachments/assets/e236d9f8-2471-4352-b1a6-7b17f5575a53">   
+<img width="735" alt="13" src="https://github.com/user-attachments/assets/e236d9f8-2471-4352-b1a6-7b17f5575a53">   
 
 
 
