@@ -113,18 +113,18 @@ contents of the Floorplan.def file-
 let's see, how the def file looks in terms of graphics using a tool called "MAGIC"
 to open magic,
    ```tcl
+   #change the directory to
+   cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/17-03_12-06/results/floorplan/
+
    #use the follwing command to launch magic
    magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
    ```
 <!--9-->
    <img width="932" alt="9" src="https://github.com/user-attachments/assets/b1f263ad-c8c0-439f-b9f4-0354bc6c444f">
 
-metal layer check-
-<!--10-->
-   <img width="439" alt="10" src="https://github.com/user-attachments/assets/c3cb4a5c-293f-47d5-9d86-54b6c82dcf64">
-<!--11-->
-   Tap-cell insertion
-   <img width="151" alt="11" src="https://github.com/user-attachments/assets/ca7acb6e-93d1-496b-a56f-81a0330123f1">
+
+
+     
 
    
 
