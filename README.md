@@ -54,15 +54,16 @@
       <img width="692" alt="4" src="https://github.com/user-attachments/assets/2ebdd100-2103-4c7c-8e79-c61ca51bb17c">     
       
 #### SKY130_D1_SK3_L5: steps to characterize synthesis results-
-   in this stage we shall record the outputs of the synthesis stage. this stage includes synthesized netlist & timing report along with the sequential cell count, ratio.
+   4. familiarizing with post-synth collaterals-
+      ```tcl
+      #formula for calculating the sequential block ratio in a design-
+      (Total number of sequential blocks/ total cell count) * 100
       ```
-      formula for counting the sequential blocks and ratio is,
-            (total number of sequntial blocks / total cell count) *$100
-      ```
-   in our case,    
-      the total number of sequential blocks= 1613    
-      total cell counts                    = 14876    
-      ratio                                = (1613/14876) * 100 = 10.842968%
+      In our case,
+         total number of DFF's=1613
+         total number of cells=14876
+         ratio = (1613/14876) * 100 = 10.84296%    
+   
       <!--5-->
       <img width="259" alt="5" src="https://github.com/user-attachments/assets/207a27b7-499f-4099-8707-5e7d17d21ee4">     
 
