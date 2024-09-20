@@ -38,7 +38,7 @@
       <img width="570" alt="3" src="https://github.com/user-attachments/assets/18eb4f43-2f92-433d-a110-9c43c4d9dbfa">
 
 #### SKY130_D1_SK3_L3: Review files after design prep and run synthesis-
-   ```
+   ```tcl
       #to run the synthesis
       run_synthesis
 
