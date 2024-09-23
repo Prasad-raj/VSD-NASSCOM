@@ -224,30 +224,30 @@
       <img width="850" alt="31" src="https://github.com/user-attachments/assets/52a503c3-a25c-4816-8082-eb50c3f3e387">    
 
       ```math
-      Rise time- 2.2467 - 2.1824= 0.0643/ 64.3 ps   
+      Rise\ time\ - 2.2467 - 2.1824= 0.0643/ 64.3 ps   
       ```
       Fall tran time= time taken for output to fall to 20% - time taken for output to fall to 80%       
       <!--32-->
-      <img width="847" alt="32" src="https://github.com/user-attachments/assets/9be61aa3-ba61-466e-a97a-c03fdeb536ef">    
+      <img width="850" alt="32" src="https://github.com/user-attachments/assets/9be61aa3-ba61-466e-a97a-c03fdeb536ef">    
 
       ```math
-      Fall time calculation- 2.18 - 2.11= 0.07/ 70ps      
+      Fall\ time\ - 2.18 - 2.11= 0.07/ 70ps      
       ```
       Cell rise delay= time taken for output to rise to 50% - time taken for output to fall to 50%
       ```math
       50\%\ of\ 3.3\ v = 1.65\ v
       ```
       <!--33-->
-      <img width="628" alt="33" src="https://github.com/user-attachments/assets/0c73e333-d6dc-4be5-8306-4f20eaa4c1ad">   
+      <img width="850" alt="33" src="https://github.com/user-attachments/assets/0c73e333-d6dc-4be5-8306-4f20eaa4c1ad">   
 
       ```math
-      Cell rise delay- 2.21 - 2.14= 0.07/ 70ps        
+      Cell\ rise\ delay- 2.21 - 2.14= 0.07/ 70ps        
       ```
       <!--34-->
-      <img width="545" alt="34" src="https://github.com/user-attachments/assets/486c90af-2707-4429-9b64-3c440c1bb14c">   
+      <img width="850" alt="34" src="https://github.com/user-attachments/assets/486c90af-2707-4429-9b64-3c440c1bb14c">   
 
       ```math
-      Cell fall delay- 4.07 - 4.05= 0.02/ 20ps       
+      Cell\ fall\ delay- 4.07 - 4.05= 0.02/ 20ps       
       ```
 
 
