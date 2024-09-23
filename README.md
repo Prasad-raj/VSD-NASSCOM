@@ -1,4 +1,4 @@
-# Section-1: Invoking Opensource EDA, OpenLANE & SKY130 PDK:     
+# Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK:     
 #### SKY130_D1_SK3_L1: OpenLANE directory structure in detail-     
    1. This step shows the directory structure of the lab.
       ```bash
@@ -137,7 +137,72 @@
       <!--17-->
       <img width="749" alt="17" src="https://github.com/user-attachments/assets/11880cf9-c17b-4da8-837f-6c5b5caf99b2">   
       <!--18-->
-      <img width="756" alt="18" src="https://github.com/user-attachments/assets/a7538706-9f37-42f2-aeed-c915a562168b">    
+      <img width="756" alt="18" src="https://github.com/user-attachments/assets/a7538706-9f37-42f2-aeed-c915a562168b">   
+   
+#### SKY130_D3_SK2_L8: Lab introduction to sky130 basic layers layout and LEF using inverter-   
+   2. check the layer connectivity and see what layer it is-
+      <!--19-->
+      <img width="755" alt="19" src="https://github.com/user-attachments/assets/b6de8ae1-5b67-489a-a106-9cf796d803c9">   
+      <!--20-->
+      <img width="753" alt="20" src="https://github.com/user-attachments/assets/a0257ff5-2a1a-4ee4-a0ba-a324593df7b7">   
+      <!--21-->
+      <img width="755" alt="21" src="https://github.com/user-attachments/assets/3b76a6f4-bc5f-4972-8b21-60303dae5e58">   
+
+#### SKY130_D3_SK2_L9: Lab steps to create std cell layout and extract spice netlist-
+   3. DRC & spice extraction-
+      <!--22-->
+      <img width="754" alt="22" src="https://github.com/user-attachments/assets/2e4899aa-70d2-499a-b336-9e3b57d7800c">   
+
+      to extract the file to spice, in the tckon prompt type,
+      ```tcl
+      pwd
+      #check the current directory
+
+      extract all
+      #this will extract the file in .ext format. then do follwing to extract the parasitics also
+
+      ext2spice cthresh 0 rthresh 0
+      #then do the following-
+
+      ext2spice
+      #this will convert the .ext to .spice file
+      ```
+      <!--23-->
+      <img width="751" alt="23" src="https://github.com/user-attachments/assets/3ccc4563-71d4-4630-b5a7-3baceb78fc5b">   
+      <!--24-->
+      <img width="746" alt="24" src="https://github.com/user-attachments/assets/abba8cd7-1a73-4a97-955b-58c5418829b9">    
+
+      looking into the .spice file-
+      <!--25-->
+      <img width="754" alt="25" src="https://github.com/user-attachments/assets/3d36ba27-7577-4896-a9be-152cf5020784">   
+
+#### SKY130_D3_SK3_L1: Lab steps to create final SPICE deck using sky130 tech-
+   4. 
+
+      
+
+
+      
+
+
+
+   
+
+      
+
+
+
+     
+   
+      
+
+
+      
+
+   
+     
+      
+   
 
 
 
