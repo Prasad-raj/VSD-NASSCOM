@@ -112,6 +112,37 @@
       <img width="650" alt="12" src="https://github.com/user-attachments/assets/01c277c8-1cf7-4ac6-b0a8-1c1b98dd63c4">    
       <!--13-->
       <img width="650" alt="13" src="https://github.com/user-attachments/assets/157632e7-8f88-440b-a64a-654acca51acb">    
+
+#### SKY130_D2_SK2_L5: congestion aware placement using RePlAce-
+   4. Running the placement-
+      <!--14-->
+      <img width="551" alt="14" src="https://github.com/user-attachments/assets/cba9a8c9-1c6b-4489-b451-f63819c2a048">   
+
+      seeing the placement def using magic-
+      <!--15-->
+      <img width="755" alt="15" src="https://github.com/user-attachments/assets/8676b04f-66bc-4e7d-a8bb-1fadb7bbf054">   
+      <!--16-->
+      <img width="755" alt="16" src="https://github.com/user-attachments/assets/5280ba28-6df9-46a0-966b-a025e4a5e197">   
+
+# Section-3: design library cell using Magic layout and ngspice characterization-   
+#### SKY130_D3_SK1_L5: Lab steps to git clone vsdstdcelldesign-    
+   1. clone the git repo for std cell characterization-
+      ```tcl
+      #change to the openlane directory
+      cd Desktop/work/tools/openlane_work_dir/openlane
+
+      #clone the following repo there
+      git clone https://github.com/nickson-jose/vsdstdcelldesign.git
+      ```
+      <!--17-->
+      <img width="749" alt="17" src="https://github.com/user-attachments/assets/11880cf9-c17b-4da8-837f-6c5b5caf99b2">   
+      <!--18-->
+      <img width="756" alt="18" src="https://github.com/user-attachments/assets/a7538706-9f37-42f2-aeed-c915a562168b">    
+
+
+
+
+
    
 
 
