@@ -91,7 +91,7 @@
    3. visualize the .def file in magic
       ```tcl
       #stay at the directory-
-      cd Desktop/work/tools/openlane_woring_dir/openlane/runs/19-09_17-49/results/floorplan
+      cd Desktop/work/tools/openlane_woring_dir/openlane/designs/picorv32a/runs/19-09_17-49/results/floorplan
 
       #invoke magic along with desired def file-
       magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
