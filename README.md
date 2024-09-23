@@ -83,7 +83,7 @@
    2. snapshot of .def file from floorplan
       ```tcl
       #change directory to-
-      cd Desktop/work/tools/openlane_woring_dir/openlane/runs/19-09_17-49/results/floorplan
+      cd Desktop/work/tools/openlane_woring_dir/openlane/designs/picorv32a/runs/19-09_17-49/results/floorplan
       ```
       <!--8-->
       <img width="368" alt="8" src="https://github.com/user-attachments/assets/e5dae2f8-f228-4846-afa0-434d7dd51666">  
