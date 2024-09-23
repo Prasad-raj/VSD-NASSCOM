@@ -177,7 +177,89 @@
       <img width="754" alt="25" src="https://github.com/user-attachments/assets/3d36ba27-7577-4896-a9be-152cf5020784">   
 
 #### SKY130_D3_SK3_L1: Lab steps to create final SPICE deck using sky130 tech-
-   4. 
+   4. update the .spice file and proceed to ngspice-
+      unit box size in magic-
+      <!--26-->
+      <img width="755" alt="26" src="https://github.com/user-attachments/assets/f74fe0fe-1bff-4e1a-947f-d14300310727">   
+
+      updated spice file-
+      <!--27-->
+      <img width="780" alt="27" src="https://github.com/user-attachments/assets/8c32a258-9e08-4fdd-b6a9-813b09d4b984">   
+      <!--28-->
+      <img width="770" alt="28" src="https://github.com/user-attachments/assets/6e27b4fe-c32f-49fa-9878-ef6771b1f32f">   
+
+#### SKY130_D3_SK3_L2: Lab steps to characterize inverter using sky130 model files-
+   5. invoking "ngspice" and characterize a simple inverter-
+      ```tcl
+      #change directory to
+      cd Desktop/work/tools/openlane_work_dir/openlane/vsdstdcelldesign
+
+      #command for ngspice
+      ngspice sky130_inv.spice
+
+      #plot the variables
+      plot y vs time a
+      ```
+      <!--29-->
+      <img width="637" alt="29" src="https://github.com/user-attachments/assets/f0f8c5d8-175c-479a-a7b3-c11c07291fe9">   
+      <!--30-->
+      <img width="756" alt="30" src="https://github.com/user-attachments/assets/9826edb9-221f-4354-aa5d-d8b6397b8212">    
+
+   6. Characterization of the cell-   
+      This depends on four parameters basically.
+      ```
+      _Rise time_- the time it takes for a signal to change from a low value to a high value.   
+      _Fall time_- the time it takes for a signal to change from a high value to a low value.    
+      _Cell rise delay_- Cell rise delay refers to the time it takes for the output of a cell to transition from a low voltage level (logic 0) to a high voltage level (logic 1) after a corresponding change in the input signal.       
+      _Cell fall delay_- Cell fall delay is the time it takes for the output of a cell to transition from a high voltage level (logic 1) to a low voltage level (logic 0) after a corresponding change in the input signal.         
+      ```
+      <!--31-->
+      Rise tran time= time taken for output to rise to 80% - time taken for output to rise to 20%
+      ```math
+      20\%\ of\ output = 660\ mv
+      ```
+      ```math
+      80\%\ of\ output = 2.64\ v
+      ```
+      <img width="850" alt="31" src="https://github.com/user-attachments/assets/52a503c3-a25c-4816-8082-eb50c3f3e387">    
+
+      ```math
+      Rise time- 2.2467 - 2.1824= 0.0643/ 64.3 ps   
+      ```
+      Fall tran time= time taken for output to fall to 20% - time taken for output to fall to 80%       
+      <!--32-->
+      <img width="847" alt="32" src="https://github.com/user-attachments/assets/9be61aa3-ba61-466e-a97a-c03fdeb536ef">    
+
+      ```math
+      Fall time calculation- 2.18 - 2.11= 0.07/ 70ps      
+      ```
+      Cell rise delay= time taken for output to rise to 50% - time taken for output to fall to 50%
+      ```math
+      50\%\ of\ 3.3\ v = 1.65\ v
+      ```
+      <!--33-->
+      <img width="628" alt="33" src="https://github.com/user-attachments/assets/0c73e333-d6dc-4be5-8306-4f20eaa4c1ad">   
+
+      ```math
+      Cell rise delay- 2.21 - 2.14= 0.07/ 70ps        
+      ```
+      <!--34-->
+      <img width="545" alt="34" src="https://github.com/user-attachments/assets/486c90af-2707-4429-9b64-3c440c1bb14c">   
+
+      ```math
+      Cell fall delay- 4.07 - 4.05= 0.02/ 20ps       
+      ```
+
+
+
+      
+      
+
+
+      
+
+
+
 
       
 
