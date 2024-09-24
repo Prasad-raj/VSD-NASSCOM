@@ -249,6 +249,153 @@
       ```math
       Cell\ fall\ delay- 4.07 - 4.05= 0.02/ 20ps       
       ```
+#### SKY130_D3_SK3_L4: Lab introduction to sky130 pdk's and steps to download labs-
+   7. Tech rule check download-
+      ```linux
+      #follow the following web for drc rules in pdk
+      https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#rules-periphery--page-root
+      
+      #download the tech rules from opencircuitdesign
+      wget https://opencircuitdeign.com/open_pdks/archive/drc_tests.tgz
+
+      #extract all
+      tar xfz drc_tests.tgz
+
+      #invoke magic
+      magic -d XR
+      ```
+#### SKY130_D3_SK3_L6: Lab exercise to fix poly.9 error in sky130 tech-file-
+   8. Overriding the poly rules (poly.9)-      
+      incorrect poly rule implementation with no drc.    
+      <!--35-->
+      <img width="942" alt="35" src="https://github.com/user-attachments/assets/4524e290-f423-4ff4-ae8b-86640431a956">    
+
+      updating the tech file for new drc update-
+      <!--36-->
+      <img width="941" alt="36" src="https://github.com/user-attachments/assets/267bb12a-3a41-432a-9330-698be5f797b9">   
+      <!--37-->
+      <img width="944" alt="37" src="https://github.com/user-attachments/assets/26c92f7d-4b59-4b31-bae0-d77f095085c1">    
+      <!--38-->
+      <img width="941" alt="38" src="https://github.com/user-attachments/assets/597790c9-2963-4e7e-9b09-6d2c66fb7d57">    
+
+# Section-4: Pre-layout timing analysis and importance of good clock tree-
+#### SKY130_D4_SK1_L1: Timing modelling using delay tables-
+   1. Lab steps to convert grid info to track info          
+      The cell characterization rules-
+      ```
+      * The input and output ports must lie in the intersection of the vertical and horizontal tracks.
+      * Width of the standard cell should be odd multiples of the horizontal track pitch.
+      * Height of the standard cell should be even multiples of the vertical track pitch.
+      ```
+      Now lets check if the layout is meeting the conditions or not-    
+      * first see the track info-
+      <!--39-->
+      <img width="941" alt="39" src="https://github.com/user-attachments/assets/0ce90a60-322a-4c2b-9b1a-36411e957361">    
+
+      ```tcl
+      #change the directory to-
+      cd Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd
+
+      #see the track info
+      less tracks.info
+      ```
+      <!--40-->
+      <img width="578" alt="40" src="https://github.com/user-attachments/assets/94807443-64ad-42e3-8358-5eb3aa63ef08">   
+
+      To check the interconnection-      
+      <!--41-->
+      <img width="946" alt="41" src="https://github.com/user-attachments/assets/0ac710c5-d88c-42a8-bc3d-e5e0a65ea497">    
+
+#### SKY130_D4_SK1_L2: Lab steps to convert magic layout to std cell LEF-    
+   2. Extract the LEF-     
+      ```tcl
+      #lef extraction command
+      lef write
+      ```
+      <!--42-->
+      <img width="942" alt="42" src="https://github.com/user-attachments/assets/629464b5-f155-4e0b-ad47-a314862ebbf8">    
+
+   3. Add the custom cell to the picorv32a design-
+      ```tcl
+      # Copy lef file
+      cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+      # List and check whether it's copied
+      ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+      # Copy lib files
+      cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
+      # List and check whether it's copied
+      ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+      ```
+      <!--43-->
+      <img width="767" alt="43" src="https://github.com/user-attachments/assets/88e22fa1-637c-4646-bd77-7a0506b88f00">   
+
+   4. Edit the config.tcl file-
+      ```tcl
+      set ::env(LIB_SYNTH) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+      set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib"
+      set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
+      set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
+
+      set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
+      ```
+      <!--44-->
+      <img width="555" alt="44" src="https://github.com/user-attachments/assets/1a09f6fa-3d85-4506-85ca-8eeb04914c6f">    
+
+   5. Commands to invoke OpenLANE
+      ```tcl
+      #alias the following command
+      alias docker='docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) efabless/openlane:v0.21'
+      
+      #Since we have aliased the long command to 'docker' we can invoke the OpenLANE flow docker sub-system by just running this command
+      docker
+
+      #We can invoke the OpenLANE flow in the Interactive mode using the following command
+      ./flow.tcl -interactive
+
+      #Now that OpenLANE flow is open we have to input the required packages for proper functionality of the OpenLANE flow
+      package require openlane 0.9
+
+      #design preparation
+      prep -design picorv32a
+
+      # Adiitional commands to include newly added lef to openlane flow
+      set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+      add_lefs -src $lefs
+
+      #run the synthesis using the command
+      run_synthesis
+      ```
+      <!--45-->
+      <img width="835" alt="45" src="https://github.com/user-attachments/assets/482666ca-a5a4-4f42-99ac-f3e160622a83">   
+      <!--46-->
+      <img width="835" alt="46" src="https://github.com/user-attachments/assets/a17e24ee-94ee-4062-9b2b-5c5fcc20f629">    
+      <!--47-->
+      <img width="835" alt="47" src="https://github.com/user-attachments/assets/502dd589-809e-4b56-9755-89605b4f9d4c">    
+
+
+
+
+
+
+
+      
+
+
+      
+
+
+
+      
+      
+
+
+
+      
+
+      
 
 
 
