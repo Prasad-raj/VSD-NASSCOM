@@ -675,6 +675,22 @@
       <img width="873" alt="67" src="https://github.com/user-attachments/assets/2e7e0f9d-5c8f-4719-a318-5fd3f9df5521">   
       <!--68-->
       <img width="911" alt="68" src="https://github.com/user-attachments/assets/dccc1e61-210d-4d5d-b0b1-792aa5adb71e">     
+      
+      See the routing lef and def in magic
+      ```tcl
+      ## Change directory to path containing routed def
+      cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-09_11-02/results/routing/
+
+      # Command to load the routed def in magic tool
+      magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.def &
+      ```
+      <!--69-->
+      <img width="941" alt="69" src="https://github.com/user-attachments/assets/0ea345cd-e187-46cc-91eb-473955530f6c">   
+      <!--70-->
+      <img width="940" alt="70" src="https://github.com/user-attachments/assets/1c2aaeee-6ea6-46b9-9235-08876d15fd57">     
+
+      
+
 
 
       
