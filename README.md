@@ -458,8 +458,8 @@
       <!--56-->
       <img width="942" alt="56" src="https://github.com/user-attachments/assets/748f82b9-365a-41e7-8950-aab0009359dc">    
       
-#### SKY130_D4_SK2_L3: Lab steps to configure OpenSTA for post-synth timing analysis-
-   8. Static Timing Analysis
+#### SKY130_D4_SK2_L3: Timing Analysis with ideal clocks using OpenSTA-
+   8. Lab steps to configure OpenSTA for post-synth timing analysis
       create a file name pre_sta.conf in openlane directory
       ```tcl
       #change the directory-
