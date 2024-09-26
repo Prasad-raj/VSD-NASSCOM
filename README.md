@@ -518,6 +518,10 @@
       #run the timing
       sta pre_sta.conf
       ```
+      <!--58-->
+      <img width="710" alt="58" src="https://github.com/user-attachments/assets/29c7b1bf-00ef-4c43-a743-6d5b6b110580">  
+      <!--59-->
+      <img width="393" alt="59" src="https://github.com/user-attachments/assets/743ddfab-5bde-4dd6-927e-ae16915c58d3">   
 
 #### SKY130_D4_SK2_L4: Lab steps to optimize synthesis to reduce setup violations-     
    9. ECO induced for error fixing-    
@@ -526,8 +530,8 @@
       report_net -connections _(net_name)_
       e:g report_net -connections _13316_
       ```
-      <!--58-->
-      <img width="200" alt="58" src="https://github.com/user-attachments/assets/7353a4d5-472f-4a15-977f-9fe04b79a1d0">    
+      <!--60-->
+      <img width="200" alt="60" src="https://github.com/user-attachments/assets/7353a4d5-472f-4a15-977f-9fe04b79a1d0">    
 
       in case of timing violation, try to replace the weak drive strength cells with more drive strength cells. that should give a hit on area but the slew should reduce.
       ```tcl
@@ -540,6 +544,18 @@
       # Generating custom timing report
       report_checks -fields {net cap slew input_pins} -digits 4
       ```
+
+#### SKY130_D4_SK3_L3: Clock Tree Synthesis TritonCTS and Signal Integrity-    
+   10. Lab steps to run CTS using TritonCTS-
+       now, we want our tool to take the new netlist post changes-
+       ```tcl
+       #to overwrite the synthesized netlist with the previous one
+       write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/23-09_04-43/results/synthesis/picorev32a.synthesis.v
+       ```
+       
+       
+       
+       
       
 
       
