@@ -532,10 +532,10 @@
       in case of timing violation, try to replace the weak drive strength cells with more drive strength cells. that should give a hit on area but the slew should reduce.
       ```tcl
       # Reports all the connections to a net
-      report_net -connections _(cell_instance)_
+      report_net -connections _(net_name)_
       
       # Replacing cell
-      replace_cell _(cell_instance)_ (lib_cell)
+      replace_cell _(net_name)_ (lib_cell)
       
       # Generating custom timing report
       report_checks -fields {net cap slew input_pins} -digits 4
