@@ -551,8 +551,104 @@
        ```tcl
        #to overwrite the synthesized netlist with the previous one
        write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/23-09_04-43/results/synthesis/picorev32a.synthesis.v
+
+       #now come to the openlane direcotry and run the flow again,
+       cd cd Desktop/work/tools/openlane_working_dir/openlane
+
+       # Now once again we have to prep design so as to update variables
+       prep -design picorv32a -tag 23-09_04-43 -overwrite
+      
+       # Addiitional commands to include newly added lef to openlane flow merged.lef
+       set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+       add_lefs -src $lefs
+         
+       # Command to set new value for SYNTH_STRATEGY
+       set ::env(SYNTH_STRATEGY) "DELAY 3"
+        
+       # Command to set new value for SYNTH_SIZING
+       set ::env(SYNTH_SIZING) 1
+         
+       # Now that the design is prepped and ready, we can run synthesis using following command
+       run_synthesis
+         
+       # Follwing commands are alltogather sourced in "run_floorplan" command
+       init_floorplan
+       place_io
+       tap_decap_or
+         
+       # Now we are ready to run placement
+       run_placement
+         
+       # Incase getting error
+       unset ::env(LIB_CTS)
+         
+       # With placement done we are now ready to run CTS
+       run_cts
        ```
+       <!--61-->
+       <img width="937" alt="61" src="https://github.com/user-attachments/assets/014d4e0a-5f07-4eff-98c0-ad21698ca5d1">     
+
+#### SKY130_D4_SK4_L3: Lab steps to analyze timing with real clocks using OpenSTA-      
+   11. Continue with the following command to execute the cts-    
+       ```tcl    
+       # Command to run OpenROAD tool
+       openroad
+      
+       # Reading lef file
+       read_lef /openLANE_flow/designs/picorv32a/runs/24-03_10-03/tmp/merged.lef
+      
+       # Reading def file
+       read_def /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/cts/picorv32a.cts.def
+      
+       # Creating an OpenROAD database to work with
+       write_db pico_cts1.db
+      
+       # Loading the created database in OpenROAD
+       read_db pico_cts.db
+      
+       # Read netlist post CTS
+       read_verilog /openLANE_flow/designs/picorv32a/runs/24-03_10-03/results/synthesis/picorv32a.synthesis_cts.v
+      
+       # Read library for design
+       read_liberty $::env(LIB_SYNTH_COMPLETE)
+      
+       # Link design and library
+       link_design picorv32a
+      
+       # Read in the custom sdc we created
+       read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+      
+       # Setting all cloks as propagated clocks
+       set_propagated_clock [all_clocks]
+      
+       # Generating custom timing report
+       report_checks -path_delay min_max -fields {slew trans net cap input_pins} -format full_clock_expanded -digits 4
+      
+       # Report hold skew
+       report_clock_skew -hold
+      
+       # Report setup skew
+       report_clock_skew -setup
+      
+       # Exit to OpenLANE flow
+       exit
+       ```
+       <!--62-->
+       <img width="609" alt="62" src="https://github.com/user-attachments/assets/1e366649-f650-48ae-95fb-cde54e1287a7">   
+       <!--63-->
+       <img width="523" alt="63" src="https://github.com/user-attachments/assets/b96d211b-8e79-49c5-b8aa-5bd6f7752a21">   
+
+# Section-5: Final steps for RTL to GDS using trinRoute and OpenSTA-      
+#### SKY130_D5_SK1_L1: Introduction to Maze Routing Lee's Algorithm-      
+   1. Routing and Design rule check (DRC)- 
+
        
+
+
+
+
+
+
        
        
        
