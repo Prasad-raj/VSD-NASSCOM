@@ -638,9 +638,54 @@
        <!--63-->
        <img width="523" alt="63" src="https://github.com/user-attachments/assets/b96d211b-8e79-49c5-b8aa-5bd6f7752a21">   
 
-# Section-5: Final steps for RTL to GDS using trinRoute and OpenSTA-      
-#### SKY130_D5_SK1_L1: Introduction to Maze Routing Lee's Algorithm-      
-   1. Routing and Design rule check (DRC)- 
+# Section-5: Final steps for RTL to GDS using trinRoute and OpenSTA-         
+#### SKY130_D5_SK2_L1: Introduction to Maze Routing Lee's Algorithm-        
+   1. Routing and Design rule check (DRC)-     
+      ```tcl
+      #to check till where you have run the flow
+      echo $::env(CURRENT_DEF)
+
+      #create pdn network
+      gen_pdn
+      ```
+      <!--64-->
+      <img width="623" alt="64" src="https://github.com/user-attachments/assets/3108d84b-bf1e-4627-bb09-87285bfd640b">  
+      <!--65-->
+      <img width="359" alt="65" src="https://github.com/user-attachments/assets/1cb6adc0-9d57-44bb-9bd5-6af13a6a5cbd">    
+
+      pdn generated layout
+      ```tcl
+      # Change directory to path containing generated PDN def
+      cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-09_11-02/tmp/floorplan/
+
+      # Command to load the PDN def in magic tool
+      magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read 14-pdn.def &
+      ```
+      <!--66-->
+      pdn generation      
+      <img width="944" alt="66" src="https://github.com/user-attachments/assets/7af91da5-1969-46b8-8a6f-141e86edf749">
+
+#### SKY130_D5_SK2_L3: Basics of global and detail routing and configure TritonRoute-       
+   2. Fast/ Global routing is done using FastROUTE & detailed routing is done using TritonROUTE.    
+      ```tcl
+      #run the placement
+      run_placement
+      ```
+      <!--67-->
+      <img width="873" alt="67" src="https://github.com/user-attachments/assets/2e7e0f9d-5c8f-4719-a318-5fd3f9df5521">   
+      <!--68-->
+      <img width="911" alt="68" src="https://github.com/user-attachments/assets/dccc1e61-210d-4d5d-b0b1-792aa5adb71e">     
+
+
+      
+
+
+      
+
+
+      
+
+      
 
        
 
