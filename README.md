@@ -375,6 +375,195 @@
       <!--47-->
       <img width="835" alt="47" src="https://github.com/user-attachments/assets/502dd589-809e-4b56-9755-89605b4f9d4c">    
 
+#### SKY130_D4_SK1_L7: Lab steps to configure settings to fix slack and include vsdinv-
+   6. Commands to change parameters to improve timing and run synthesis
+      ```tcl
+      # Command to display current value of variable SYNTH_STRATEGY
+      echo $::env(SYNTH_STRATEGY)
+
+      # Command to set new value for SYNTH_STRATEGY
+      set ::env(SYNTH_STRATEGY) "DELAY 3"
+      
+      # Command to display current value of variable SYNTH_BUFFERING to check whether it's enabled
+      echo $::env(SYNTH_BUFFERING)
+      
+      # Command to display current value of variable SYNTH_SIZING
+      echo $::env(SYNTH_SIZING)
+
+      # Command to set new value for SYNTH_SIZING
+      set ::env(SYNTH_SIZING) 1
+      
+      # Command to display current value of variable SYNTH_DRIVING_CELL to check whether it's the proper cell or not
+      echo $::env(SYNTH_DRIVING_CELL)
+      
+      # Now that the design is prepped and ready, we can run synthesis using following command
+      run_synthesis
+      ```
+      <!--48-->
+      <img width="942" alt="48" src="https://github.com/user-attachments/assets/105da08d-4fc3-498b-8bf7-0a86d933b81c"> 
+      
+      Previous slack values-   
+      <!--49-->
+      <img width="473" alt="49" src="https://github.com/user-attachments/assets/805a7202-7d60-4f73-90a6-14841841e2f2">   
+      
+      Afetr running the commands-    
+      <!--50-->
+      <img width="938" alt="50" src="https://github.com/user-attachments/assets/68571dee-694a-46c1-aabb-42003428bc28">    
+
+   7. Run floorplan
+      since now we know that our custom cell has been added in the design and synthesis is successful, we can run floorplan
+      ```tcl
+      #floorplan command
+      run_floorplan
+      ```
+      custom cell has been added-
+      <!--51-->
+      <img width="943" alt="51" src="https://github.com/user-attachments/assets/1b5e850b-ac3d-492b-b75e-2077fadf0832">    
+      <!--52-->
+      <img width="863" alt="52" src="https://github.com/user-attachments/assets/bd3fd23a-7b42-4248-83d9-a0f9f571b4ed">    
+
+      since we are facing an unexcepted error, we need to run the following commands to tackle this-
+      ```tcl
+      #commands-
+      init_floorplan
+      place_io
+      tap_decap_or
+      ```
+      screenshots of running the commands-     
+      <!--53-->
+      <img width="941" alt="53" src="https://github.com/user-attachments/assets/3070321a-bc9f-4ee1-b44b-7aa70973548c">    
+
+      ```tcl
+      #running the placement
+      run_placement
+      ```
+      <!--54-->
+      <img width="938" alt="54" src="https://github.com/user-attachments/assets/2ec8f260-8c03-4ab4-9b5b-6d709bcba0a7">    
+
+      Load the placement .def file to magic-     
+      ```tcl
+      # Change directory to path containing generated placement def
+      cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/23-09_04-43/results/placement/
+      
+      # Command to load the placement def in magic tool
+      magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
+      ```
+      <!--55-->
+      <img width="941" alt="55" src="https://github.com/user-attachments/assets/5fa3bce5-e6e3-4c19-ac05-d390ab18b73a">    
+
+      ```tcl
+      #command for tckon to viewinternal layers of the cell
+      expand
+      ```
+      <!--56-->
+      <img width="942" alt="56" src="https://github.com/user-attachments/assets/748f82b9-365a-41e7-8950-aab0009359dc">    
+      
+#### SKY130_D4_SK2_L3: Lab steps to configure OpenSTA for post-synth timing analysis-
+   8. Static Timing Analysis
+      create a file name pre_sta.conf in openlane directory
+      ```tcl
+      #change the directory-
+      cd Desktop/work/tools/openlane_working_dir/openlane
+
+      #create a file name pre_sta.conf
+      gvim pre_sta.conf
+
+      #add the following there
+      set_cmd_units -time ns -capacitance pF -current mA -voltage V -resistance kOhm -distance um
+
+      read_liberty -max /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib
+      
+      read_liberty -min /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib
+      
+      read_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/23-09_04-43/results/synthesis/picorv32a.synthesis.v
+      
+      link_design picorv32a
+      
+      read_sdc /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/my_base.sdc
+      
+      report_checks -path_delay min_max -fields {slew trans net cap input_pin}
+      report_tns
+      report_wns
+      ```
+      create a new file name my_base.sdc in picorv32a/src directory based on base.sdc file at openlane/scripts directory
+      ```tcl
+      #change the directrory to
+      cd Desktop/work/tools/openlane_working_dir/openlane/scripts
+
+      #copy the contents of the "base.sdc" file & change the directory to
+      cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src
+
+      #create a new file name my_base.sdc and paste the contents copied from base.sdc file
+      gvim my_base.sdc
+
+      #add the following content ahead of the file.
+      set ::env(CLOCK_PORT) clk
+      set ::env(CLOCK_PERIOD) 24.73
+      #set ::env(SYNTH_DRIVING_CELL) sky130_vsdinv
+      set ::env(SYNTH_DRIVING_CELL) sky130_fd_sc_hd__inv_8
+      set ::env(SYNTH_DRIVING_CELL_PIN) Y
+      set ::env(SYNTH_CAP_LOAD) 17.653
+      set ::env(IO_PCT) 0.2
+      set ::env(SYNTH_MAX_FANOUT) 6
+
+      #save the file
+      ```
+      <!--57-->
+      <img width="944" alt="57" src="https://github.com/user-attachments/assets/34ceb02f-bfe9-4ace-8489-02198870c049">   
+    
+      ```tcl
+      #comeback to the directory
+      cd Desktop/work/tools/openlane_working_dir/openlane
+
+      #run the timing
+      sta pre_sta.conf
+      ```
+
+#### SKY130_D4_SK2_L4: Lab steps to optimize synthesis to reduce setup violations-     
+   9. ECO induced for error fixing-    
+      ```tcl
+      #commands to see the driving strength of any net
+      report_net -connections _(net_name)_
+      e:g report_net -connections _13316_
+      ```
+      <!--58-->
+      <img width="200" alt="58" src="https://github.com/user-attachments/assets/7353a4d5-472f-4a15-977f-9fe04b79a1d0">    
+
+      in case of timing violation, try to replace the weak drive strength cells with more drive strength cells. that should give a hit on area but the slew should reduce.
+      ```tcl
+      # Reports all the connections to a net
+      report_net -connections _(cell_instance)_
+      
+      # Replacing cell
+      replace_cell _(cell_instance)_ (lib_cell)
+      
+      # Generating custom timing report
+      report_checks -fields {net cap slew input_pins} -digits 4
+      ```
+      
+
+      
+
+      
+
+      
+      
+      
+      
+
+
+
+
+
+      
+      
+
+
+      
+
+
+
+
 
 
 
