@@ -718,10 +718,10 @@
 
 
 
-#Acknowledgement
-      * [Kunal Ghosh](https://github.com/kunalg123), Co-Founder, VSD Corp. pvt. Ltd.
-      * [Nickson P Jose](https://github.com/nickson-jose), Physical Design Engineer, Intel Corp.
-      * [R. Timothy Edwards](https://github.com/RTimothyEdwards), Senior VP of Analog and Design, efabless corp.
+#Acknowledgement     
+      [Kunal Ghosh](https://github.com/kunalg123), Co-Founder, VSD Corp. pvt. Ltd.      
+      [Nickson P Jose](https://github.com/nickson-jose), Physical Design Engineer, Intel Corp.     
+      [R. Timothy Edwards](https://github.com/RTimothyEdwards), Senior VP of Analog and Design, efabless corp.       
       
 
 
