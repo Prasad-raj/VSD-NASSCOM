@@ -38,6 +38,8 @@
      - [SKY130_D5_SK2_L1: Introduction to Maze Routing Lee's Algorithm](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d5_sk2_l1-introduction-to-maze-routing-lees-algorithm-)
      - [SKY130_D5_SK2_L3: Basics of global and detail routing and configure TritonRoute](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d5_sk2_l3-basics-of-global-and-detail-routing-and-configure-tritonroute-)
      - [SKY130_D5_SK3_L4: Routing topology algorithm and final files list post-route](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d5_sk3_l4-routing-topology-algorithm-and-final-files-list-post-route-)
+   - [Certificate](https://github.com/Prasad-raj/VSD-NASSCOM/blob/main/README.md#certificate)
+   - [Acknowledgement](https://github.com/Prasad-raj/VSD-NASSCOM/blob/main/README.md#acknowledgement) 
 
 # Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK         
 #### SKY130_D1_SK3_L1: OpenLANE directory structure in detail-     
