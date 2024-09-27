@@ -18,7 +18,7 @@
    - [Section-2: Good vs Bad floorplan and inroduction to library cells](https://github.com/Prasad-raj/VSD-NASSCOM#section-2-good-vs-bad-floorplan-and-inroduction-to-library-cells)
      - [SKY130_D2_SK1_L6: Steps to run Floorplan using OpenLANE](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d2_sk1_l6-steps-to-run-floorplan-using-openlane-)
      - [SKY130_D2_SK2_L5: congestion aware placement using RePlAce](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d2_sk2_l5-congestion-aware-placement-using-replace-)
-   - [Section-3: design library cell using Magic layout and ngspice characterization](https://github.com/Prasad-raj/VSD-NASSCOM#section-3-design-library-cell-using-magic-layout-and-ngspice-characterization-)
+   - [Section-3: Design library cell using Magic layout and ngspice characterization](https://github.com/Prasad-raj/VSD-NASSCOM#section-3-design-library-cell-using-magic-layout-and-ngspice-characterization-)
      - [SKY130_D3_SK1_L5: Lab steps to git clone vsdstdcelldesign](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk1_l5-lab-steps-to-git-clone-vsdstdcelldesign-)
      - [SKY130_D3_SK2_L8: Lab introduction to sky130 basic layers layout and LEF using inverter](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk2_l8-lab-introduction-to-sky130-basic-layers-layout-and-lef-using-inverter-)
      - [SKY130_D3_SK2_L9: Lab steps to create std cell layout and extract spice netlist](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk2_l9-lab-steps-to-create-std-cell-layout-and-extract-spice-netlist-)
@@ -165,7 +165,7 @@
       <!--16-->
       <img width="755" alt="16" src="https://github.com/user-attachments/assets/5280ba28-6df9-46a0-966b-a025e4a5e197">   
 
-# Section-3: design library cell using Magic layout and ngspice characterization-   
+# Section-3: Design library cell using Magic layout and ngspice characterization-   
 #### SKY130_D3_SK1_L5: Lab steps to git clone vsdstdcelldesign-    
    1. clone the git repo for std cell characterization-
       ```tcl
