@@ -574,7 +574,7 @@
       e:g report_net -connections _13316_
       ```
       <!--60-->
-      <img width="200" alt="60" src="https://github.com/user-attachments/assets/7353a4d5-472f-4a15-977f-9fe04b79a1d0">    
+      <img width="600" alt="60" src="https://github.com/user-attachments/assets/7353a4d5-472f-4a15-977f-9fe04b79a1d0">    
 
       in case of timing violation, try to replace the weak drive strength cells with more drive strength cells. that should give a hit on area but the slew should reduce.
       ```tcl
