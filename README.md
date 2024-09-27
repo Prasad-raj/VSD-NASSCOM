@@ -159,7 +159,7 @@
 #### SKY130_D2_SK2_L5: congestion aware placement using RePlAce-
    4. Running the placement-
       <!--14-->
-      <img width="551" alt="14" src="https://github.com/user-attachments/assets/cba9a8c9-1c6b-4489-b451-f63819c2a048">   
+      <img width="755" alt="14" src="https://github.com/user-attachments/assets/cba9a8c9-1c6b-4489-b451-f63819c2a048">   
 
       seeing the placement def using magic-
       <!--15-->
@@ -178,7 +178,7 @@
       git clone https://github.com/nickson-jose/vsdstdcelldesign.git
       ```
       <!--17-->
-      <img width="749" alt="17" src="https://github.com/user-attachments/assets/11880cf9-c17b-4da8-837f-6c5b5caf99b2">   
+      <img width="756" alt="17" src="https://github.com/user-attachments/assets/11880cf9-c17b-4da8-837f-6c5b5caf99b2">   
       <!--18-->
       <img width="756" alt="18" src="https://github.com/user-attachments/assets/a7538706-9f37-42f2-aeed-c915a562168b">   
    
@@ -187,7 +187,7 @@
       <!--19-->
       <img width="755" alt="19" src="https://github.com/user-attachments/assets/b6de8ae1-5b67-489a-a106-9cf796d803c9">   
       <!--20-->
-      <img width="753" alt="20" src="https://github.com/user-attachments/assets/a0257ff5-2a1a-4ee4-a0ba-a324593df7b7">   
+      <img width="755" alt="20" src="https://github.com/user-attachments/assets/a0257ff5-2a1a-4ee4-a0ba-a324593df7b7">   
       <!--21-->
       <img width="755" alt="21" src="https://github.com/user-attachments/assets/3b76a6f4-bc5f-4972-8b21-60303dae5e58">   
 
@@ -211,9 +211,9 @@
       #this will convert the .ext to .spice file
       ```
       <!--23-->
-      <img width="751" alt="23" src="https://github.com/user-attachments/assets/3ccc4563-71d4-4630-b5a7-3baceb78fc5b">   
+      <img width="754" alt="23" src="https://github.com/user-attachments/assets/3ccc4563-71d4-4630-b5a7-3baceb78fc5b">   
       <!--24-->
-      <img width="746" alt="24" src="https://github.com/user-attachments/assets/abba8cd7-1a73-4a97-955b-58c5418829b9">    
+      <img width="754" alt="24" src="https://github.com/user-attachments/assets/abba8cd7-1a73-4a97-955b-58c5418829b9">    
 
       looking into the .spice file-
       <!--25-->
@@ -223,13 +223,13 @@
    4. update the .spice file and proceed to ngspice-
       unit box size in magic-
       <!--26-->
-      <img width="755" alt="26" src="https://github.com/user-attachments/assets/f74fe0fe-1bff-4e1a-947f-d14300310727">   
+      <img width="780" alt="26" src="https://github.com/user-attachments/assets/f74fe0fe-1bff-4e1a-947f-d14300310727">   
 
       updated spice file-
       <!--27-->
       <img width="780" alt="27" src="https://github.com/user-attachments/assets/8c32a258-9e08-4fdd-b6a9-813b09d4b984">   
       <!--28-->
-      <img width="770" alt="28" src="https://github.com/user-attachments/assets/6e27b4fe-c32f-49fa-9878-ef6771b1f32f">   
+      <img width="780" alt="28" src="https://github.com/user-attachments/assets/6e27b4fe-c32f-49fa-9878-ef6771b1f32f">   
 
 #### SKY130_D3_SK3_L2: Lab steps to characterize inverter using sky130 model files-
    5. invoking "ngspice" and characterize a simple inverter-
@@ -244,7 +244,7 @@
       plot y vs time a
       ```
       <!--29-->
-      <img width="637" alt="29" src="https://github.com/user-attachments/assets/f0f8c5d8-175c-479a-a7b3-c11c07291fe9">   
+      <img width="756" alt="29" src="https://github.com/user-attachments/assets/f0f8c5d8-175c-479a-a7b3-c11c07291fe9">   
       <!--30-->
       <img width="756" alt="30" src="https://github.com/user-attachments/assets/9826edb9-221f-4354-aa5d-d8b6397b8212">    
 
@@ -311,13 +311,13 @@
    8. Overriding the poly rules (poly.9)-      
       incorrect poly rule implementation with no drc.    
       <!--35-->
-      <img width="942" alt="35" src="https://github.com/user-attachments/assets/4524e290-f423-4ff4-ae8b-86640431a956">    
+      <img width="941" alt="35" src="https://github.com/user-attachments/assets/4524e290-f423-4ff4-ae8b-86640431a956">    
 
       updating the tech file for new drc update-
       <!--36-->
       <img width="941" alt="36" src="https://github.com/user-attachments/assets/267bb12a-3a41-432a-9330-698be5f797b9">   
       <!--37-->
-      <img width="944" alt="37" src="https://github.com/user-attachments/assets/26c92f7d-4b59-4b31-bae0-d77f095085c1">    
+      <img width="941" alt="37" src="https://github.com/user-attachments/assets/26c92f7d-4b59-4b31-bae0-d77f095085c1">    
       <!--38-->
       <img width="941" alt="38" src="https://github.com/user-attachments/assets/597790c9-2963-4e7e-9b09-6d2c66fb7d57">    
 
@@ -343,11 +343,11 @@
       less tracks.info
       ```
       <!--40-->
-      <img width="578" alt="40" src="https://github.com/user-attachments/assets/94807443-64ad-42e3-8358-5eb3aa63ef08">   
+      <img width="941" alt="40" src="https://github.com/user-attachments/assets/94807443-64ad-42e3-8358-5eb3aa63ef08">   
 
       To check the interconnection-      
       <!--41-->
-      <img width="946" alt="41" src="https://github.com/user-attachments/assets/0ac710c5-d88c-42a8-bc3d-e5e0a65ea497">    
+      <img width="941" alt="41" src="https://github.com/user-attachments/assets/0ac710c5-d88c-42a8-bc3d-e5e0a65ea497">    
 
 #### SKY130_D4_SK1_L2: Lab steps to convert magic layout to std cell LEF-    
    2. Extract the LEF-     
@@ -385,7 +385,7 @@
       set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
       ```
       <!--44-->
-      <img width="555" alt="44" src="https://github.com/user-attachments/assets/1a09f6fa-3d85-4506-85ca-8eeb04914c6f">    
+      <img width="767" alt="44" src="https://github.com/user-attachments/assets/1a09f6fa-3d85-4506-85ca-8eeb04914c6f">    
 
    5. Commands to invoke OpenLANE
       ```tcl
