@@ -1,3 +1,15 @@
+# Physical Design
+   Netlist (.v ) converted into GDSII form(layout form) logical connectivity of cells converted into physical connectivity. Physical design directly impacts the performance, area and power of the chip. The PD flow includes- Floorplan, Powerplan, Placement, CTS, Timing closure and finally GDSII. 
+
+# OpenSource EDA
+   Mainstream companies typically use industry-standard tools to complete the physical design (PD) flow, which often requires significant investment. However, to learn PD with minimal cost, open-source tools like Yosys and OpenROAD offer an excellent alternative. These tools are part of the OpenLane flow, providing a nearly zero-cost solution for PD learning and experimentation.
+   
+   ![EXTRA2](https://github.com/user-attachments/assets/a765bf5e-273e-4003-a74f-f4444f3b87a8)
+
+# About the Program
+   The program, titled **"DIGITAL VLSI SoC DESIGN AND PLANNING,"** is a two-week course designed to familiarize participants with the physical design flow using OpenLANE. It covers the process from RTL to GDSII generation, with a focus on the Place and Route (PnR) flow. Participants will gain insights into key stages such as floorplanning, power distribution network (PDN) generation, placement, routing, timing analysis, and SPEF extraction. You will also gain an overall understanding of DRC checks and the integration of PDKs into the design flow.
+
+
 # Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK         
 #### SKY130_D1_SK3_L1: OpenLANE directory structure in detail-     
    1. This step shows the directory structure of the lab.
