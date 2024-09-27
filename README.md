@@ -443,11 +443,11 @@
       run_synthesis
       ```
       <!--48-->
-      <img width="942" alt="48" src="https://github.com/user-attachments/assets/105da08d-4fc3-498b-8bf7-0a86d933b81c"> 
+      <img width="938" alt="48" src="https://github.com/user-attachments/assets/105da08d-4fc3-498b-8bf7-0a86d933b81c"> 
       
       Previous slack values-   
       <!--49-->
-      <img width="473" alt="49" src="https://github.com/user-attachments/assets/805a7202-7d60-4f73-90a6-14841841e2f2">   
+      <img width="938" alt="49" src="https://github.com/user-attachments/assets/805a7202-7d60-4f73-90a6-14841841e2f2">   
       
       Afetr running the commands-    
       <!--50-->
