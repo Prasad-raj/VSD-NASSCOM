@@ -1,4 +1,4 @@
-<img width="944" alt="71" src="https://github.com/user-attachments/assets/2f5296f3-354c-4af9-9fba-e094e61bf474"># Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK         
+# Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK         
 #### SKY130_D1_SK3_L1: OpenLANE directory structure in detail-     
    1. This step shows the directory structure of the lab.
       ```bash
