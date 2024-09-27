@@ -1,4 +1,4 @@
-# Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK         
+<img width="944" alt="71" src="https://github.com/user-attachments/assets/2f5296f3-354c-4af9-9fba-e094e61bf474"># Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK         
 #### SKY130_D1_SK3_L1: OpenLANE directory structure in detail-     
    1. This step shows the directory structure of the lab.
       ```bash
@@ -687,7 +687,47 @@
       <!--69-->
       <img width="941" alt="69" src="https://github.com/user-attachments/assets/0ea345cd-e187-46cc-91eb-473955530f6c">   
       <!--70-->
-      <img width="940" alt="70" src="https://github.com/user-attachments/assets/1c2aaeee-6ea6-46b9-9235-08876d15fd57">     
+      <img width="940" alt="70" src="https://github.com/user-attachments/assets/1c2aaeee-6ea6-46b9-9235-08876d15fd57">    
+      
+#### SKY130_D5_SK3_L4: Routing topology algorithm and final files list post-route-     
+   3. Routing and parasitic extraction       
+      <!--71-->
+      FastRoute guide provided in openlane/openlane/designs/picorv32a/runs/26-09_11-02/tmp/routing/ directory in 15-fastroute.guide file.      
+      <img width="944" alt="71" src="https://github.com/user-attachments/assets/9aed9ffa-dda5-4d38-9cbe-cb7c9093355e">
+
+      now for spef extraction
+      ```tcl
+      #change the directory to
+      cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/scripts/spef_extractor
+
+      #command to parse the files
+      python3 main.py --lef_file /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-09_11-02/tmp/merged.lef --def_file /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-09_11-02/results/routing/picorv32a.def
+      ```
+      <!--72-->
+      <img width="937" alt="72" src="https://github.com/user-attachments/assets/efdd13d9-fdbc-499c-91ff-0bd5afe43c87">    
+
+      the spef file-        
+      it is present in
+      ```tcl
+      cd /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/26-09_11-02/results/routing
+      ```
+      <!--73-->
+      <img width="941" alt="73" src="https://github.com/user-attachments/assets/bd7880ba-6182-4ed8-adc6-847493522115">    
+      
+#Certificate
+
+
+
+#Acknowledgement
+      * [Kunal Ghosh](https://github.com/kunalg123), Co-Founder, VSD Corp. pvt. Ltd.
+      * [Nickson P Jose](https://github.com/nickson-jose), Physical Design Engineer, Intel Corp.
+      * [R. Timothy Edwards](https://github.com/RTimothyEdwards), Senior VP of Analog and Design, efabless corp.
+      
+
+
+
+
+
 
       
 
