@@ -463,7 +463,7 @@
       <!--51-->
       <img width="943" alt="51" src="https://github.com/user-attachments/assets/1b5e850b-ac3d-492b-b75e-2077fadf0832">    
       <!--52-->
-      <img width="863" alt="52" src="https://github.com/user-attachments/assets/bd3fd23a-7b42-4248-83d9-a0f9f571b4ed">    
+      <img width="943" alt="52" src="https://github.com/user-attachments/assets/bd3fd23a-7b42-4248-83d9-a0f9f571b4ed">    
 
       since we are facing an unexcepted error, we need to run the following commands to tackle this-
       ```tcl
@@ -564,7 +564,7 @@
       <!--58-->
       <img width="710" alt="58" src="https://github.com/user-attachments/assets/29c7b1bf-00ef-4c43-a743-6d5b6b110580">  
       <!--59-->
-      <img width="393" alt="59" src="https://github.com/user-attachments/assets/743ddfab-5bde-4dd6-927e-ae16915c58d3">   
+      <img width="710" alt="59" src="https://github.com/user-attachments/assets/743ddfab-5bde-4dd6-927e-ae16915c58d3">   
 
 #### SKY130_D4_SK2_L4: Lab steps to optimize synthesis to reduce setup violations-     
    9. ECO induced for error fixing-    
@@ -679,7 +679,7 @@
        <!--62-->
        <img width="609" alt="62" src="https://github.com/user-attachments/assets/1e366649-f650-48ae-95fb-cde54e1287a7">   
        <!--63-->
-       <img width="523" alt="63" src="https://github.com/user-attachments/assets/b96d211b-8e79-49c5-b8aa-5bd6f7752a21">   
+       <img width="609" alt="63" src="https://github.com/user-attachments/assets/b96d211b-8e79-49c5-b8aa-5bd6f7752a21">   
 
 # Section-5: Final steps for RTL to GDS using trinRoute and OpenSTA-         
 #### SKY130_D5_SK2_L1: Introduction to Maze Routing Lee's Algorithm-        
@@ -694,7 +694,7 @@
       <!--64-->
       <img width="623" alt="64" src="https://github.com/user-attachments/assets/3108d84b-bf1e-4627-bb09-87285bfd640b">  
       <!--65-->
-      <img width="359" alt="65" src="https://github.com/user-attachments/assets/1cb6adc0-9d57-44bb-9bd5-6af13a6a5cbd">    
+      <img width="623" alt="65" src="https://github.com/user-attachments/assets/1cb6adc0-9d57-44bb-9bd5-6af13a6a5cbd">    
 
       pdn generated layout
       ```tcl
@@ -715,7 +715,7 @@
       run_placement
       ```
       <!--67-->
-      <img width="873" alt="67" src="https://github.com/user-attachments/assets/2e7e0f9d-5c8f-4719-a318-5fd3f9df5521">   
+      <img width="911" alt="67" src="https://github.com/user-attachments/assets/2e7e0f9d-5c8f-4719-a318-5fd3f9df5521">   
       <!--68-->
       <img width="911" alt="68" src="https://github.com/user-attachments/assets/dccc1e61-210d-4d5d-b0b1-792aa5adb71e">     
       
