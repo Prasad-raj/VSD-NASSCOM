@@ -11,9 +11,33 @@
 
 # Outline
    - [Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#section-1-invocation-of-open-source-eda-openlane-and-sky130-pdk)     
-     - [SKY130_D1_SK3_L1: OpenLANE directory structure in detail](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#sky130_d1_sk3_l1-openlane-directory-structure-in-detail-)       
+     - [SKY130_D1_SK3_L1: OpenLANE directory structure in detail](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#sky130_d1_sk3_l1-openlane-directory-structure-in-detail-)
      - [SKY130_D1_SK3_L2: Design preparation steps](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#sky130_d1_sk3_l2-design-preparation-steps-)
-     - 
+     - [SKY130_D1_SK3_L3: Review files after design prep and run synthesis](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d1_sk3_l3-review-files-after-design-prep-and-run-synthesis-)
+     - [SKY130_D1_SK3_L5: steps to characterize synthesis results](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d1_sk3_l5-steps-to-characterize-synthesis-results-)
+   - [Section-2: Good vs Bad floorplan and inroduction to library cells](https://github.com/Prasad-raj/VSD-NASSCOM#section-2-good-vs-bad-floorplan-and-inroduction-to-library-cells)
+     - [SKY130_D2_SK1_L6: Steps to run Floorplan using OpenLANE](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d2_sk1_l6-steps-to-run-floorplan-using-openlane-)
+     - [SKY130_D2_SK2_L5: congestion aware placement using RePlAce](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d2_sk2_l5-congestion-aware-placement-using-replace-)
+   - [Section-3: design library cell using Magic layout and ngspice characterization](https://github.com/Prasad-raj/VSD-NASSCOM#section-3-design-library-cell-using-magic-layout-and-ngspice-characterization-)
+     - [SKY130_D3_SK1_L5: Lab steps to git clone vsdstdcelldesign](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk1_l5-lab-steps-to-git-clone-vsdstdcelldesign-)
+     - [SKY130_D3_SK2_L8: Lab introduction to sky130 basic layers layout and LEF using inverter](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk2_l8-lab-introduction-to-sky130-basic-layers-layout-and-lef-using-inverter-)
+     - [SKY130_D3_SK2_L9: Lab steps to create std cell layout and extract spice netlist](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk2_l9-lab-steps-to-create-std-cell-layout-and-extract-spice-netlist-)
+     - [SKY130_D3_SK3_L1: Lab steps to create final SPICE deck using sky130 tech](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk3_l1-lab-steps-to-create-final-spice-deck-using-sky130-tech-)
+     - [SKY130_D3_SK3_L2: Lab steps to characterize inverter using sky130 model files](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk3_l2-lab-steps-to-characterize-inverter-using-sky130-model-files-)
+     - [SKY130_D3_SK3_L4: Lab introduction to sky130 pdk's and steps to download labs](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk3_l4-lab-introduction-to-sky130-pdks-and-steps-to-download-labs-)
+     - [SKY130_D3_SK3_L6: Lab exercise to fix poly.9 error in sky130 tech-file](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d3_sk3_l6-lab-exercise-to-fix-poly9-error-in-sky130-tech-file-)
+   - [Section-4: Pre-layout timing analysis and importance of good clock tree](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#section-4-pre-layout-timing-analysis-and-importance-of-good-clock-tree-)
+     - [SKY130_D4_SK1_L1: Timing modelling using delay tables](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d4_sk1_l1-timing-modelling-using-delay-tables-)
+     - [SKY130_D4_SK1_L2: Lab steps to convert magic layout to std cell LEF](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d4_sk1_l2-lab-steps-to-convert-magic-layout-to-std-cell-lef-)
+     - [SKY130_D4_SK1_L7: Lab steps to configure settings to fix slack and include vsdinv](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d4_sk1_l7-lab-steps-to-configure-settings-to-fix-slack-and-include-vsdinv-)
+     - [SKY130_D4_SK2_L3: Timing Analysis with ideal clocks using OpenSTA](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d4_sk2_l3-timing-analysis-with-ideal-clocks-using-opensta-)
+     - [SKY130_D4_SK2_L4: Lab steps to optimize synthesis to reduce setup violations](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d4_sk2_l4-lab-steps-to-optimize-synthesis-to-reduce-setup-violations-)
+     - [SKY130_D4_SK3_L3: Clock Tree Synthesis TritonCTS and Signal Integrity](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d4_sk3_l3-clock-tree-synthesis-tritoncts-and-signal-integrity-)
+     - [SKY130_D4_SK4_L3: Lab steps to analyze timing with real clocks using OpenSTA](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d4_sk4_l3-lab-steps-to-analyze-timing-with-real-clocks-using-opensta-)
+   - [Section-5: Final steps for RTL to GDS using trinRoute and OpenSTA](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#section-5-final-steps-for-rtl-to-gds-using-trinroute-and-opensta-)
+     - [SKY130_D5_SK2_L1: Introduction to Maze Routing Lee's Algorithm](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d5_sk2_l1-introduction-to-maze-routing-lees-algorithm-)
+     - [SKY130_D5_SK2_L3: Basics of global and detail routing and configure TritonRoute](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d5_sk2_l3-basics-of-global-and-detail-routing-and-configure-tritonroute-)
+     - [SKY130_D5_SK3_L4: Routing topology algorithm and final files list post-route](https://github.com/Prasad-raj/VSD-NASSCOM?tab=readme-ov-file#sky130_d5_sk3_l4-routing-topology-algorithm-and-final-files-list-post-route-)
 
 # Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK         
 #### SKY130_D1_SK3_L1: OpenLANE directory structure in detail-     
