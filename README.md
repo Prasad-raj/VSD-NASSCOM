@@ -714,14 +714,14 @@
       <!--73-->
       <img width="941" alt="73" src="https://github.com/user-attachments/assets/bd7880ba-6182-4ed8-adc6-847493522115">    
       
-#Certificate
+# Certificate
 
 
 
-#Acknowledgement     
-      [Kunal Ghosh](https://github.com/kunalg123), Co-Founder, VSD Corp. pvt. Ltd.      
-      [Nickson P Jose](https://github.com/nickson-jose), Physical Design Engineer, Intel Corp.     
-      [R. Timothy Edwards](https://github.com/RTimothyEdwards), Senior VP of Analog and Design, efabless corp.       
+# Acknowledgement     
+   * [Kunal Ghosh](https://github.com/kunalg123), Co-Founder, VSD Corp. pvt. Ltd.      
+   * [Nickson P Jose](https://github.com/nickson-jose), Physical Design Engineer, Intel Corp.     
+   * [R. Timothy Edwards](https://github.com/RTimothyEdwards), Senior VP of Analog and Design, efabless corp.       
       
 
 
