@@ -10,7 +10,7 @@
    The program, titled **"DIGITAL VLSI SoC DESIGN AND PLANNING,"** is a two-week course designed to familiarize participants with the physical design flow using OpenLANE. It covers the process from RTL to GDSII generation, with a focus on the Place and Route (PnR) flow. Participants will gain insights into key stages such as floorplanning, power distribution network (PDN) generation, placement, routing, timing analysis, and SPEF extraction. You will also gain an overall understanding of DRC checks and the integration of PDKs into the design flow.
 
 # Outline
-   - [Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#section-1-invocation-of-open-source-eda-openlane-and-sky130-pdk)     
+   - [Section-1: Inception of Open-source EDA, OpenLANE and Sky130 PDK](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#section-1-invocation-of-open-source-eda-openlane-and-sky130-pdk)     
      - [SKY130_D1_SK3_L1: OpenLANE directory structure in detail](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#sky130_d1_sk3_l1-openlane-directory-structure-in-detail-)
      - [SKY130_D1_SK3_L2: Design preparation steps](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#sky130_d1_sk3_l2-design-preparation-steps-)
      - [SKY130_D1_SK3_L3: Review files after design prep and run synthesis](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d1_sk3_l3-review-files-after-design-prep-and-run-synthesis-)
@@ -41,7 +41,7 @@
    - [Certificate](https://github.com/Prasad-raj/VSD-NASSCOM/blob/main/README.md#certificate)
    - [Acknowledgement](https://github.com/Prasad-raj/VSD-NASSCOM/blob/main/README.md#acknowledgement) 
 
-# Section-1: Invocation of Open-source EDA, OpenLANE and Sky130 PDK         
+# Section-1: Inception of Open-source EDA, OpenLANE and Sky130 PDK         
 #### SKY130_D1_SK3_L1: OpenLANE directory structure in detail-     
    1. This step shows the directory structure of the lab.
       ```bash
