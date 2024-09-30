@@ -12,7 +12,7 @@
 # Outline
    - [Section-1: Inception of Open-source EDA, OpenLANE and Sky130 PDK](https://github.com/Prasad-raj/VSD-NASSCOM#section-1-inception-of-open-source-eda-openlane-and-sky130-pdk)     
      - [SKY130_D1_SK3_L1: OpenLANE directory structure in detail](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d1_sk3_l1-openlane-directory-structure-in-detail-)
-     - [SKY130_D1_SK3_L2: Design preparation steps](https://github.com/Prasad-raj/VSD-NASSCOM/edit/main/README.md#sky130_d1_sk3_l2-design-preparation-steps-)
+     - [SKY130_D1_SK3_L2: Design preparation steps](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d1_sk3_l2-design-preparation-steps-)
      - [SKY130_D1_SK3_L3: Review files after design prep and run synthesis](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d1_sk3_l3-review-files-after-design-prep-and-run-synthesis-)
      - [SKY130_D1_SK3_L5: steps to characterize synthesis results](https://github.com/Prasad-raj/VSD-NASSCOM#sky130_d1_sk3_l5-steps-to-characterize-synthesis-results-)
    - [Section-2: Good vs Bad floorplan and inroduction to library cells](https://github.com/Prasad-raj/VSD-NASSCOM#section-2-good-vs-bad-floorplan-and-inroduction-to-library-cells)
