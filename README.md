@@ -5,6 +5,8 @@
    Mainstream companies typically use industry-standard tools to complete the physical design (PD) flow, which often requires significant investment. However, to learn PD with minimal cost, open-source tools like Yosys and OpenROAD offer an excellent alternative. These tools are part of the OpenLane flow, providing a nearly zero-cost solution for PD learning and experimentation.
    
    ![EXTRA2](https://github.com/user-attachments/assets/a765bf5e-273e-4003-a74f-f4444f3b87a8)
+   <img width="560" alt="EXTRA" src="https://github.com/user-attachments/assets/75fce8d1-f04e-4360-afc1-dbbaa7a8d53c" />
+
 
 # About the Program
    The program, titled **"DIGITAL VLSI SoC DESIGN AND PLANNING,"** is a two-week course designed to familiarize participants with the physical design flow using OpenLANE. It covers the process from RTL to GDSII generation, with a focus on the Place and Route (PnR) flow. Participants will gain insights into key stages such as floorplanning, power distribution network (PDN) generation, placement, routing, timing analysis, and SPEF extraction. You will also gain an overall understanding of DRC checks and the integration of PDKs into the design flow.
